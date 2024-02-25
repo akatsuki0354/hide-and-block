@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="hidden" id="demo">demo</h1>
+    <button class="button" id="submit" onclick="submit()">Submit</button>
+
+    <script>
+        function submit() {
+            var demo = document.getElementById('demo');
+            if (demo.classList.contains('hidden')) {
+                demo.classList.remove('hidden');
+                demo.classList.add('block');
+            } else {
+                demo.classList.remove('block');
+                demo.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
